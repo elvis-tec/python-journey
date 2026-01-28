@@ -1,0 +1,9 @@
+services:
+  app:
+    image: python:3.11-slim
+    container_name: python-journey-cont
+    working_dir: /app
+    volumes:
+      - .:/app
+    # Keep the container running indefinitely so you can attach to it
+    command: tail -f /dev/null
